@@ -5,27 +5,20 @@
 #include <unordered_set>
 #include <algorithm>
 #include <stack>
+#include <string>
 
 using namespace std;
-// Include other necessary standard library headers
 
-// Implementations of your search algorithms
-
-/*  Breath First Search - An algorithm that focuses on finding the neighboring nodes of all nodes at depth i
-    before iterating by 1, visiting every child till the goal is found
-    Parameters:
-    @param graph    =   Full Graph given by coordinates.csv, constant variable
-    @param start    =   User Inputted Variable, constant variable upon execution
-    @param goal     =   User Inputted Variable, constant variable upon execution */
-vector<string> breadthFirstSearch(const CityGraph& graph, const string& start, const string& goal) {
+vector<string> breadthFirstSearch(const CityGraph& graph, const string& start, const string& goal, double& totalDistance) {
     queue<string> queue;
     unordered_map<string, string> cameFrom; // Track the path
-    unordered_map<string, bool> visited;
+    unordered_map<string, bool> visited; // Notes nodes already taken
 
     // Initialize BFS
     queue.push(start);
     visited[start] = true;
     cameFrom[start] = ""; // Start has no predecessor
+    totalDistance = 0.0;
 
     // BFS Algorithm
     while (!queue.empty()) {
@@ -35,15 +28,22 @@ vector<string> breadthFirstSearch(const CityGraph& graph, const string& start, c
         // Goal check
         if (current == goal) {
             vector<string> path;
+            string temp = goal;
             for (string at = goal; at != ""; at = cameFrom[at]) {
                 path.push_back(at);
+                
+                // Error upon execution here: out of range
+                if (cameFrom[at] != start) {
+                    totalDistance += graph.at(at).distanceTo(graph.at(cameFrom[at]));
+                }
+                // End of error execution
             }
             reverse(path.begin(), path.end());
             return path;
         }
 
-        // Explore neighbors
-        for (const string& next : graph.at(current)) {
+        // Neighbor Exploration
+        for (const string& next : graph.at(current).adjacents) {
             if (!visited[next]) {
                 queue.push(next);
                 visited[next] = true;
@@ -83,7 +83,7 @@ vector<string> depthFirstSearch(const CityGraph& graph, const string& start, con
         }
 
         // Explore neighbors
-        for (const string& next : graph.at(current)) {
+        for (const string& next : graph.at(current).adjacents) {
             if (visited.find(next) == visited.end()) {
                 stack.push(next);
                 if (cameFrom.find(next) == cameFrom.end()) { // Avoid overwriting cameFrom if already set

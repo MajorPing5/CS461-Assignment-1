@@ -1,9 +1,11 @@
 // main.cpp
 #include "CityGraph.h"
+#include "TimeCalculator.h"
 #include <iostream>
 #include <fstream>
 #include <sstream>
 #include <string>
+#include <chrono>
 
 using namespace std;
 
@@ -13,8 +15,11 @@ void parseCities(const string& filename, CityGraph& graph);
 void parseAdjacencies(const string& filename, CityGraph& graph);
 
 int main() {
-    //Variable used for user selection of algorithms
+    // Variable used for user selection of algorithms
     int selection = 0;
+    
+    // Variable used for calculating drive time, can be adjusted for better modularity
+    double speed = 60;
 
     // Initialize the graph structure
     CityGraph graph;
@@ -25,37 +30,72 @@ int main() {
 
     // Rest of your main function (user interaction, algorithm selection, etc.)
     cout << "Welcome to the Search Method Program! Please select your preferred search algorithm/technique"
-        << " by the number indicated to the left of the option (numbers only, no symbols):" << endl
-        << "[1] Breath First Search" << endl
-        << "[2] Depth First Search" << endl
-        << "[3] Iterative Deepening Depth First Search" << endl
-        << "[4] Best-First Search" << endl
-        << "[5] A* Search" << endl
-        << "[6] Quit" << endl;
+            " by the number indicated to the left of the option (numbers only, no symbols):\n"
+            "[1] Breath First Search\n"
+            "[2] Depth First Search\n"
+            "[3] Iterative Deepening Depth First Search\n"
+            "[4] Best-First Search\n"
+            "[5] A* Search\n"
+            "[6] Quit" << endl;
     cin  >> selection;
     
     while (selection != 6) {
-        
+        string start = "";
+        string goal = "";
+        double totalDistance = 0.0;
         switch (selection) {
-        case 1:
-            breadthFirstSearch(graph, start, goal);
-            break();
-        case 2:
+        case 1: {
+            cout << "Submit the starting point name: ";
+            cin >> start;
+            cout << "Submit the objective name: ";
+            cin >> goal;
+
+            // System Timer Begins
+            chrono::time_point<chrono::high_resolution_clock> timeStart = chrono::high_resolution_clock::now();
+
+            vector <string> path = breadthFirstSearch(graph, start, goal, totalDistance);
+
+            // System Timer Ends
+            chrono::time_point<chrono::high_resolution_clock> timeStop = chrono::high_resolution_clock::now();
+
+            // Calculate duration
+            chrono::milliseconds duration = chrono::duration_cast<chrono::milliseconds>(timeStop - timeStart);
+
+            if (!path.empty()) {
+                cout << "Path found: ";
+                for (const auto& city : path) {
+                    cout << city << " -> ";
+                }
+                cout << "\nTotal Distance: " 
+                    << totalDistance << endl;
+                cout << "Time taken to find the route: "
+                    << duration.count() << " milliseconds" << endl;
+            } else {
+                cout << "No path found." << endl;
+                cout << "Time taken to find the route: NaN milliseconds" << endl;
+            }
+            break;
+        }
+        case 2: {
             depthFirstSearch(graph, start, goal);
-            break();
-        case 3:
+            break;
+        }
+        case 3: {
             cout << "Algorithm incomplete" << endl;
-            break();
-        case 4:
+            break;
+        }
+        case 4: {
             cout << "Algorithm incomplete" << endl;
-            break();
-        case 5:
+            break;
+        }
+        case 5: {
             cout << "Algorithm incomplete" << endl;
-            break();
+            break;
+        }
         default:
             cout << "Input not recognized. Try again." << endl;
         }
-        cout << "For another algorithm, select a different number than your previous entry. Else, enter 6 to quit the program:" < , endl;
+        cout << "For another algorithm, select a different number than your previous entry. Else, enter 6 to quit the program:" << endl
             << "[1] Breath First Search" << endl
             << "[2] Depth First Search" << endl
             << "[3] Iterative Deepening Depth First Search" << endl
@@ -65,20 +105,18 @@ int main() {
         cin >> selection;
     }
 
-
+    system("pause");
+    return 0;
 }
-
 
 //  Function intended to begin reading and processing the cities within Coordinates.csv
 void parseCities(const string& filename, CityGraph& graph) {
     ifstream file(filename);
-    ifstream file(adjacenciesFilename);
+    ifstream adjFile(adjacenciesFilename);
     string line;
     
     /*  As of typing, there is NO header line within the csv file. For this to work,
         there cannot be a header line within the csv else this breaks the program reading */
-
-    CityGraph graph;
 
     while (getline(file, line)) {
         stringstream linestream(line);
