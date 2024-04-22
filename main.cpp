@@ -1,6 +1,6 @@
 // main.cpp
 #include "CityGraph.h"
-#include "TimeCalculator.h"
+//#include "TimeCalculator.h"
 #include <iostream>
 #include <fstream>
 #include <sstream>
@@ -43,13 +43,14 @@ int main() {
         string start = "";
         string goal = "";
         double totalDistance = 0.0;
+        
+        cout << "Submit the starting point name: ";
+        cin >> start;
+        cout << "Submit the objective name: ";
+        cin >> goal;
+
         switch (selection) {
         case 1: {
-            cout << "Submit the starting point name: ";
-            cin >> start;
-            cout << "Submit the objective name: ";
-            cin >> goal;
-
             // System Timer Begins
             chrono::time_point<chrono::high_resolution_clock> timeStart = chrono::high_resolution_clock::now();
 
@@ -59,7 +60,7 @@ int main() {
             chrono::time_point<chrono::high_resolution_clock> timeStop = chrono::high_resolution_clock::now();
 
             // Calculate duration
-            chrono::milliseconds duration = chrono::duration_cast<chrono::milliseconds>(timeStop - timeStart);
+            chrono::microseconds duration = chrono::duration_cast<chrono::microseconds>(timeStop - timeStart);
 
             if (!path.empty()) {
                 cout << "Path found: ";
@@ -69,7 +70,7 @@ int main() {
                 cout << "\nTotal Distance: " 
                     << totalDistance << endl;
                 cout << "Time taken to find the route: "
-                    << duration.count() << " milliseconds" << endl;
+                    << duration.count() << " microseconds" << endl;
             } else {
                 cout << "No path found." << endl;
                 cout << "Time taken to find the route: NaN milliseconds" << endl;
@@ -81,7 +82,23 @@ int main() {
             break;
         }
         case 3: {
-            cout << "Algorithm incomplete" << endl;
+            chrono::time_point<chrono::high_resolution_clock> timeStart = chrono::high_resolution_clock::now();
+            vector<string> path = IDDFS(graph, start, goal);
+            chrono::time_point<chrono::high_resolution_clock> timeStop = chrono::high_resolution_clock::now();
+            chrono::microseconds duration = chrono::duration_cast<chrono::microseconds>(timeStop - timeStart);
+
+            if (!path.empty()) {
+                cout << "Path found using IDDFS: ";
+                for (const auto& city : path) {
+                    cout << city << " -> ";
+                }
+                cout << "end\n";
+                cout << "Time taken to find the route: " << duration.count() << " microseconds\n";
+            }
+            else {
+                cout << "No path found using IDDFS." << endl;
+                cout << "Time taken to find the route: NaN microseconds\n";
+            }
             break;
         }
         case 4: {

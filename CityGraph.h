@@ -46,6 +46,6 @@ vector<string> breadthFirstSearch(const CityGraph& graph, const string& start, c
     @param goal     =   User Inputted Variable, constant variable upon execution */
 vector<string> depthFirstSearch(const CityGraph& graph, const string& start, const string& goal);
 
-// Other prototypes...
+vector<string> IDDFS(const CityGraph& graph, const string& start, const string& goal);
 
 #endif // CITYGRAPH_H

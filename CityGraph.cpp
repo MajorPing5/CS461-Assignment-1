@@ -6,6 +6,7 @@
 #include <algorithm>
 #include <stack>
 #include <string>
+#include <algorithm>
 
 using namespace std;
 
@@ -29,25 +30,34 @@ vector<string> breadthFirstSearch(const CityGraph& graph, const string& start, c
         if (current == goal) {
             vector<string> path;
             string temp = goal;
-            for (string at = goal; at != ""; at = cameFrom[at]) {
+            string at = goal;
+            while (at != "") {
                 path.push_back(at);
-                
+                string predecessor = cameFrom[at];
+
                 // Error upon execution here: out of range
-                if (cameFrom[at] != start) {
-                    totalDistance += graph.at(at).distanceTo(graph.at(cameFrom[at]));
+                if (predecessor != "" && predecessor != start) {
+                    // Check if the predecessor exists in the graph before trying to access it
+                    if (graph.find(at) != graph.end() && graph.find(predecessor) != graph.end()) {
+                        totalDistance += graph.at(at).distanceTo(graph.at(predecessor));
+                    }
                 }
                 // End of error execution
+
+                at = predecessor; // Move to the predecessor for the next iteration
             }
             reverse(path.begin(), path.end());
             return path;
         }
 
         // Neighbor Exploration
-        for (const string& next : graph.at(current).adjacents) {
-            if (!visited[next]) {
-                queue.push(next);
-                visited[next] = true;
-                cameFrom[next] = current;
+        if (graph.find(current) != graph.end()) {
+            for (const string& next : graph.at(current).adjacents) {
+                if (!visited[next]) {
+                    queue.push(next);
+                    visited[next] = true;
+                    cameFrom[next] = current;
+                }
             }
         }
     }
@@ -94,4 +104,35 @@ vector<string> depthFirstSearch(const CityGraph& graph, const string& start, con
     }
 
     return {}; // Return empty path if goal is not reachable
+}
+
+bool DLS(const CityGraph& graph, const std::string& src, const std::string& goal, int depth, std::vector<std::string>& path) {
+    if (src == goal) {
+        path.push_back(src);
+        return true;
+    }
+    if (depth <= 0) return false;
+
+    auto it = graph.find(src);
+    if (it == graph.end()) return false;
+
+    for (const std::string& adj : it->second.adjacents) {
+        if (DLS(graph, adj, goal, depth - 1, path)) {
+            path.push_back(src);
+            return true;
+        }
+    }
+    return false;
+}
+
+// IDDFS implementation using existing graph structure
+vector<string> IDDFS(const CityGraph& graph, const string& start, const string& goal) {
+    for (int depth = 0; depth < INT_MAX; ++depth) {
+        vector<string> path;
+        if (DLS(graph, start, goal, depth, path)) {
+            reverse(path.begin(), path.end());
+            return path;
+        }
+    }
+    return {};
 }

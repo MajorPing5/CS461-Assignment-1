@@ -26,5 +26,8 @@
     <ClInclude Include="CityGraph.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="TimeCalculator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
