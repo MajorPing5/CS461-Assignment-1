@@ -11,8 +11,8 @@ using namespace std;
 
 string citiesFilename = "coordinates.csv";
 string adjacenciesFilename = "Adjacencies.txt";
-void parseCities(const string& filename, CityGraph& graph);
-void parseAdjacencies(const string& filename, CityGraph& graph);
+void parseCities(const string& filename, simpleGraph& graph);
+void parseAdjacencies(const string& filename, simpleGraph& graph);
 
 int main() {
     // Variable used for user selection of algorithms
@@ -22,11 +22,12 @@ int main() {
     double speed = 60;
 
     // Initialize the graph structure
-    CityGraph graph;
+    simpleGraph sgraph;
+    advancedGraph agraph;
 
     // Call functions to parse cities from CSV & txt files
-    parseCities(citiesFilename, graph);
-    parseAdjacencies(adjacenciesFilename, graph);
+    parseCities(citiesFilename, sgraph);
+    parseAdjacencies(adjacenciesFilename, sgraph);
 
     // Rest of your main function (user interaction, algorithm selection, etc.)
     cout << "Welcome to the Search Method Program! Please select your preferred search algorithm/technique"
@@ -78,13 +79,43 @@ int main() {
             break;
         }
         case 2: {
-            depthFirstSearch(graph, start, goal);
+            // System Timer Begins
+            chrono::time_point<chrono::high_resolution_clock> timeStart = chrono::high_resolution_clock::now();
+
+            vector <string> path = depthFirstSearch(graph, start, goal, totalDistance);
+
+            // System Timer Ends
+            chrono::time_point<chrono::high_resolution_clock> timeStop = chrono::high_resolution_clock::now();
+
+            // Calculate duration
+            chrono::microseconds duration = chrono::duration_cast<chrono::microseconds>(timeStop - timeStart);
+            
+            if (!path.empty()) {
+                cout << "Path found: ";
+                for (const auto& city : path) {
+                    cout << city << " -> ";
+                }
+                cout << "\nTotal Distance: "
+                    << totalDistance << endl;
+                cout << "Time taken to find the route: "
+                    << duration.count() << " microseconds" << endl;
+            }
+            else {
+                cout << "No path found." << endl;
+                cout << "Time taken to find the route: NaN milliseconds" << endl;
+            }
             break;
         }
         case 3: {
+            // System Timer Begins
             chrono::time_point<chrono::high_resolution_clock> timeStart = chrono::high_resolution_clock::now();
+            
             vector<string> path = IDDFS(graph, start, goal);
+            
+            // System Timer Ends
             chrono::time_point<chrono::high_resolution_clock> timeStop = chrono::high_resolution_clock::now();
+            
+            // Calculate duration
             chrono::microseconds duration = chrono::duration_cast<chrono::microseconds>(timeStop - timeStart);
 
             if (!path.empty()) {
@@ -102,9 +133,31 @@ int main() {
             break;
         }
         case 4: {
-            cout << "Algorithm incomplete" << endl;
+            // System Timer Begins
+            auto timeStart = std::chrono::high_resolution_clock::now();
+
+            std::vector<std::string> path = bestFirstSearch(graph, start, goal);
+
+            // System Timer Ends
+            auto timeStop = std::chrono::high_resolution_clock::now();
+            auto duration = std::chrono::duration_cast<std::chrono::microseconds>(timeStop - timeStart);
+
+            if (!path.empty()) {
+                std::cout << "Path found: ";
+                for (const auto& city : path) {
+                    std::cout << city << " -> ";
+                }
+                std::cout << "end\n";
+                std::cout << "Time taken to find the route: "
+                    << duration.count() << " microseconds\n";
+            }
+            else {
+                std::cout << "No path found." << endl;
+                std::cout << "Time taken to find the route: NaN microseconds\n";
+            }
             break;
         }
+
         case 5: {
             cout << "Algorithm incomplete" << endl;
             break;
@@ -127,7 +180,7 @@ int main() {
 }
 
 //  Function intended to begin reading and processing the cities within Coordinates.csv
-void parseCities(const string& filename, CityGraph& graph) {
+void parseCities(const string& filename, simpleGraph& graph) {
     ifstream file(filename);
     ifstream adjFile(adjacenciesFilename);
     string line;
@@ -149,7 +202,7 @@ void parseCities(const string& filename, CityGraph& graph) {
 }
 
 //  Function intended to begin reading and processing city adjacency from Adjacencies.txt
-void parseAdjacencies(const string& filename, CityGraph& graph) {
+void parseAdjacencies(const string& filename, simpleGraph& graph) {
     ifstream file(filename);
     ifstream adjFile(adjacenciesFilename);
     string line;

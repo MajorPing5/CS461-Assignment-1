@@ -10,7 +10,7 @@
 
 using namespace std;
 
-vector<string> breadthFirstSearch(const CityGraph& graph, const string& start, const string& goal, double& totalDistance) {
+vector<string> breadthFirstSearch(const simpleGraph& graph, const string& start, const string& goal, double& totalDistance) {
     queue<string> queue;
     unordered_map<string, string> cameFrom; // Track the path
     unordered_map<string, bool> visited; // Notes nodes already taken
@@ -65,14 +65,16 @@ vector<string> breadthFirstSearch(const CityGraph& graph, const string& start, c
     return {}; // Return empty path if goal is not reachable
 }
 
-vector<string> depthFirstSearch(const CityGraph& graph, const string& start, const string& goal) {
+vector<string> depthFirstSearch(const simpleGraph& graph, const string& start, const string& goal, double& totalDistance) {
     stack<string> stack;
     unordered_map<string, string> cameFrom; // For path reconstruction
     unordered_set<string> visited; // Tracks visited nodes
+    unordered_map<string, double> distanceFromStart;
 
     // Initialize DFS
     stack.push(start);
     cameFrom[start] = "";
+    distanceFromStart[start] = 0.0;
 
     //DFS Algorithm
     while (!stack.empty()) {
@@ -85,10 +87,20 @@ vector<string> depthFirstSearch(const CityGraph& graph, const string& start, con
         // Goal check
         if (current == goal) {
             vector<string> path;
-            for (string at = goal; at != ""; at = cameFrom[at]) {
+            double pathDistance = 0.0;
+            string at = goal;
+            while (at != start) {
+                string predecessor = cameFrom[at];
                 path.push_back(at);
+                if (predecessor != "") {
+                    pathDistance += graph.at(predecessor).distanceTo(graph.at(at));
+                }
+                path.push_back(at);
+                at = predecessor;
             }
+            path.push_back(start);  // Add the start node at the end of the path
             reverse(path.begin(), path.end());
+            totalDistance = pathDistance;  // Set the total distance calculated
             return path;
         }
 
@@ -102,11 +114,12 @@ vector<string> depthFirstSearch(const CityGraph& graph, const string& start, con
             }
         }
     }
-
+    totalDistance = 0.0;
     return {}; // Return empty path if goal is not reachable
 }
 
-bool DLS(const CityGraph& graph, const std::string& src, const std::string& goal, int depth, std::vector<std::string>& path) {
+// Helper function specific for IDDFS, returns either true or false
+bool DLS(const simpleGraph& graph, const string& src, const string& goal, int depth, vector<string>& path) {
     if (src == goal) {
         path.push_back(src);
         return true;
@@ -125,8 +138,8 @@ bool DLS(const CityGraph& graph, const std::string& src, const std::string& goal
     return false;
 }
 
-// IDDFS implementation using existing graph structure
-vector<string> IDDFS(const CityGraph& graph, const string& start, const string& goal) {
+// IDDFS implementation using existing graph structure, returns either the path or empty set {}
+vector<string> IDDFS(const simpleGraph& graph, const string& start, const string& goal) {
     for (int depth = 0; depth < INT_MAX; ++depth) {
         vector<string> path;
         if (DLS(graph, start, goal, depth, path)) {

@@ -14,6 +14,7 @@ struct City {
     double latitude = 0.0;
     double longitude = 0.0;
     vector<string> adjacents;
+    int heuristic = 0;
 
     // Euclidean distance formula for a 2D plane
     // Note: This is only in use due to the small-scale nature of the data
@@ -24,18 +25,20 @@ struct City {
     }
 };
 
-// Graph type definition for clarity
-using Graph = unordered_map<string, vector<string>>;
+// Simple Graph type definition for use with BFS, DFS, and IDDFS algorithms only
+using simpleGraph = unordered_map<string, vector<string>>;
 
-typedef unordered_map<string, City> CityGraph;
+// Advanced Graph type definition for clarity and segregation between algorithms
+using advancedGraph = unordered_map<string, City>;
 
 /*  Breadth First Search - An algorithm that focuses on finding the neighboring nodes of all nodes at depth i
     before iterating by 1, visiting every child till the goal is found
     Parameters:
     @param graph    =   Full Graph given by coordinates.csv and Adjacencies.txt, constant variable
     @param start    =   User Inputted Variable, constant variable upon execution
-    @param goal     =   User Inputted Variable, constant variable upon execution */
-vector<string> breadthFirstSearch(const CityGraph& graph, const string& start, const string& goal, double& totalDistance);
+    @param goal     =   User Inputted Variable, constant variable upon execution
+    @return path    =   Valid path made from start to goal, or {} should the path be impossible*/
+vector<string> breadthFirstSearch(const simpleGraph& graph, const string& start, const string& goal, double& totalDistance);
 
 /*  Depth First Search - An Algorithm that focuses on going as deep into a tree as possible, taking note of
     all nodes up to max depth before backtracking to find any alternative routes upon discovery of a dead end,
@@ -43,9 +46,17 @@ vector<string> breadthFirstSearch(const CityGraph& graph, const string& start, c
     Parameters:
     @param graph    =   Full Graph given by coordinates.csv and Adjacencies.txt, constant variable
     @param start    =   User Inputted Variable, constant variable upon execution
-    @param goal     =   User Inputted Variable, constant variable upon execution */
-vector<string> depthFirstSearch(const CityGraph& graph, const string& start, const string& goal);
+    @param goal     =   User Inputted Variable, constant variable upon execution 
+    @return path    =   Valid path made from start to goal, or {} should the path be impossible*/
+vector<string> depthFirstSearch(const simpleGraph& graph, const string& start, const string& goal, double& totalDistance);
 
-vector<string> IDDFS(const CityGraph& graph, const string& start, const string& goal);
+/* Itterative Deepening - Depth First Search - An Algorithm that focuses on traversing the given graph at a small depth, 
+    gradually increasing its depth value until it is able to reach its objective from the starting position.
+    Parameters:
+    @param graph    =
+    @param start    =
+    @param goal     =
+    @return path    = Valid path made from start to goal, or {} should the path be impossible*/
+vector<string> IDDFS(const simpleGraph& graph, const string& start, const string& goal);
 
 #endif // CITYGRAPH_H
