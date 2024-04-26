@@ -78,7 +78,30 @@ int main() {
             break;
         }
         case 2: {
-            depthFirstSearch(graph, start, goal);
+            // System Timer Begins
+            chrono::time_point<chrono::high_resolution_clock> timeStart = chrono::high_resolution_clock::now();
+
+            const vector <string> path = depthFirstSearch(graph, start, goal, totalDistance);
+
+            // System Timer Ends
+            chrono::time_point<chrono::high_resolution_clock> timeStop = chrono::high_resolution_clock::now();
+
+            // Calculate duration
+            chrono::microseconds duration = chrono::duration_cast<chrono::microseconds>(timeStop - timeStart);
+
+            if (!path.empty()) {
+                cout << "Path found: ";
+                for (const auto& city : path) {
+                    cout << city << " -> ";
+                }
+                cout << "\nTotal Distance: "
+                    << totalDistance << endl;
+                cout << "Time taken to find the route: "
+                    << duration.count() << " microseconds" << endl;
+            } else {
+                cout << "No path found." << endl;
+                cout << "Time taken to find the route: NaN milliseconds" << endl;
+            }
             break;
         }
         case 3: {

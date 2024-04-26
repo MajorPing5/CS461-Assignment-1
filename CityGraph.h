@@ -44,7 +44,7 @@ vector<string> breadthFirstSearch(const CityGraph& graph, const string& start, c
     @param graph    =   Full Graph given by coordinates.csv and Adjacencies.txt, constant variable
     @param start    =   User Inputted Variable, constant variable upon execution
     @param goal     =   User Inputted Variable, constant variable upon execution */
-vector<string> depthFirstSearch(const CityGraph& graph, const string& start, const string& goal);
+vector<string> depthFirstSearch(const CityGraph& graph, const string& start, const string& goal, double& totalDistance);
 
 vector<string> IDDFS(const CityGraph& graph, const string& start, const string& goal);
 

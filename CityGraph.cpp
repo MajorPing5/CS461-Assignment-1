@@ -65,14 +65,18 @@ vector<string> breadthFirstSearch(const CityGraph& graph, const string& start, c
     return {}; // Return empty path if goal is not reachable
 }
 
-vector<string> depthFirstSearch(const CityGraph& graph, const string& start, const string& goal) {
+vector<string> depthFirstSearch(const CityGraph& graph, const string& start, const string& goal, double& totalDistance) {
     stack<string> stack;
     unordered_map<string, string> cameFrom; // For path reconstruction
+    unordered_map<string, double> distanceFromStart;
     unordered_set<string> visited; // Tracks visited nodes
+    totalDistance = 0.0;
 
     // Initialize DFS
     stack.push(start);
     cameFrom[start] = "";
+    distanceFromStart[start] = 0.0;
+
 
     //DFS Algorithm
     while (!stack.empty()) {
@@ -85,11 +89,25 @@ vector<string> depthFirstSearch(const CityGraph& graph, const string& start, con
         // Goal check
         if (current == goal) {
             vector<string> path;
-            for (string at = goal; at != ""; at = cameFrom[at]) {
+            string at = goal;
+
+            // Reconstruct path and calculate total distance using the enhanced snippet
+            while (at != "") {
                 path.push_back(at);
+                string predecessor = cameFrom[at];
+
+                // Ensure valid graph access and calculate distance
+                if (predecessor != "" && predecessor != start) {
+                    if (graph.find(at) != graph.end() && graph.find(predecessor) != graph.end()) {
+                        totalDistance += graph.at(at).distanceTo(graph.at(predecessor));
+                    }
+                }
+
+                at = predecessor; // Move to the predecessor for the next iteration
             }
+
             reverse(path.begin(), path.end());
-            return path;
+            return path; // Return the path found
         }
 
         // Explore neighbors

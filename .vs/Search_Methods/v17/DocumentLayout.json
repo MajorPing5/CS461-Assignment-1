@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Robert-Abel Porras\\source\\repos\\UMKC Computer Science\\COMP SCI 461\\Assignment 1\\Search_Methods\\COMP-SCI-461---Assignment-1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F77CB29A-D99C-42C2-B555-4EDA2F14FAB3}|Search_Methods.vcxproj|C:\\Users\\Robert-Abel Porras\\source\\repos\\UMKC Computer Science\\COMP SCI 461\\Assignment 1\\Search_Methods\\COMP-SCI-461---Assignment-1\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{F77CB29A-D99C-42C2-B555-4EDA2F14FAB3}|Search_Methods.vcxproj|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F77CB29A-D99C-42C2-B555-4EDA2F14FAB3}|Search_Methods.vcxproj|C:\\Users\\Robert-Abel Porras\\source\\repos\\UMKC Computer Science\\COMP SCI 461\\Assignment 1\\Search_Methods\\COMP-SCI-461---Assignment-1\\TimeCalculator.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{F77CB29A-D99C-42C2-B555-4EDA2F14FAB3}|Search_Methods.vcxproj|solutionrelative:TimeCalculator.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F77CB29A-D99C-42C2-B555-4EDA2F14FAB3}|Search_Methods.vcxproj|C:\\Users\\Robert-Abel Porras\\source\\repos\\UMKC Computer Science\\COMP SCI 461\\Assignment 1\\Search_Methods\\COMP-SCI-461---Assignment-1\\CityGraph.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{F77CB29A-D99C-42C2-B555-4EDA2F14FAB3}|Search_Methods.vcxproj|solutionrelative:CityGraph.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F77CB29A-D99C-42C2-B555-4EDA2F14FAB3}|Search_Methods.vcxproj|C:\\Users\\Robert-Abel Porras\\source\\repos\\UMKC Computer Science\\COMP SCI 461\\Assignment 1\\Search_Methods\\COMP-SCI-461---Assignment-1\\CityGraph.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{F77CB29A-D99C-42C2-B555-4EDA2F14FAB3}|Search_Methods.vcxproj|solutionrelative:CityGraph.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F77CB29A-D99C-42C2-B555-4EDA2F14FAB3}|Search_Methods.vcxproj|C:\\Users\\Robert-Abel Porras\\source\\repos\\UMKC Computer Science\\COMP SCI 461\\Assignment 1\\Search_Methods\\COMP-SCI-461---Assignment-1\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F77CB29A-D99C-42C2-B555-4EDA2F14FAB3}|Search_Methods.vcxproj|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F77CB29A-D99C-42C2-B555-4EDA2F14FAB3}|Search_Methods.vcxproj|C:\\Users\\Robert-Abel Porras\\source\\repos\\UMKC Computer Science\\COMP SCI 461\\Assignment 1\\Search_Methods\\COMP-SCI-461---Assignment-1\\TimeCalculator.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F77CB29A-D99C-42C2-B555-4EDA2F14FAB3}|Search_Methods.vcxproj|solutionrelative:TimeCalculator.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,7 +34,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "TimeCalculator.h",
               "DocumentMoniker": "C:\\Users\\Robert-Abel Porras\\source\\repos\\UMKC Computer Science\\COMP SCI 461\\Assignment 1\\Search_Methods\\COMP-SCI-461---Assignment-1\\TimeCalculator.h",
               "RelativeDocumentMoniker": "TimeCalculator.h",
@@ -42,44 +42,43 @@
               "RelativeToolTip": "TimeCalculator.h",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-04-22T05:21:24.702Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-22T05:21:24.702Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "main.cpp",
               "DocumentMoniker": "C:\\Users\\Robert-Abel Porras\\source\\repos\\UMKC Computer Science\\COMP SCI 461\\Assignment 1\\Search_Methods\\COMP-SCI-461---Assignment-1\\main.cpp",
               "RelativeDocumentMoniker": "main.cpp",
               "ToolTip": "C:\\Users\\Robert-Abel Porras\\source\\repos\\UMKC Computer Science\\COMP SCI 461\\Assignment 1\\Search_Methods\\COMP-SCI-461---Assignment-1\\main.cpp",
               "RelativeToolTip": "main.cpp",
-              "ViewState": "AQIAACEAAAAAAAAAAAAAAAIAAAACAAAA",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAE4AAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-03-12T14:24:32.048Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "CityGraph.h",
               "DocumentMoniker": "C:\\Users\\Robert-Abel Porras\\source\\repos\\UMKC Computer Science\\COMP SCI 461\\Assignment 1\\Search_Methods\\COMP-SCI-461---Assignment-1\\CityGraph.h",
               "RelativeDocumentMoniker": "CityGraph.h",
               "ToolTip": "C:\\Users\\Robert-Abel Porras\\source\\repos\\UMKC Computer Science\\COMP SCI 461\\Assignment 1\\Search_Methods\\COMP-SCI-461---Assignment-1\\CityGraph.h",
               "RelativeToolTip": "CityGraph.h",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABQAAAAAAAAA",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABoAAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-04-22T03:56:56.358Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "CityGraph.cpp",
               "DocumentMoniker": "C:\\Users\\Robert-Abel Porras\\source\\repos\\UMKC Computer Science\\COMP SCI 461\\Assignment 1\\Search_Methods\\COMP-SCI-461---Assignment-1\\CityGraph.cpp",
               "RelativeDocumentMoniker": "CityGraph.cpp",
               "ToolTip": "C:\\Users\\Robert-Abel Porras\\source\\repos\\UMKC Computer Science\\COMP SCI 461\\Assignment 1\\Search_Methods\\COMP-SCI-461---Assignment-1\\CityGraph.cpp",
               "RelativeToolTip": "CityGraph.cpp",
-              "ViewState": "AQIAAGwAAAAAAAAAAAAAADgAAAAlAAAA",
+              "ViewState": "AQIAAFMAAAAAAAAAAAAmwF4AAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-04-22T03:56:54.819Z",
               "EditorCaption": ""
