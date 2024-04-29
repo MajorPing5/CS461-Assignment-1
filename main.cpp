@@ -170,7 +170,7 @@ void parseCities(const string& filename, CityGraph& graph) {
         getline(linestream, lat, ',');
         getline(linestream, lon, ',');
 
-        City city = { cityName, std::stod(lat), std::stod(lon), {} };
+        City city(cityName, std::stod(lat), std::stod(lon));
         graph[cityName] = city;
     }
 }
