@@ -1,4 +1,8 @@
-﻿  CityGraph.cpp
+﻿  AStarSearch.cpp
+  BestFirstSearch.cpp
+  BreadthFirstSearch.cpp
+  DepthFirstSearch.cpp
+  IDDFS.cpp
   main.cpp
   Generating Code...
   Search_Methods.vcxproj -> C:\Users\Robert-Abel Porras\source\repos\UMKC Computer Science\COMP SCI 461\Assignment 1\Search_Methods\COMP-SCI-461---Assignment-1\x64\Debug\Search_Methods.exe

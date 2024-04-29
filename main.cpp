@@ -1,6 +1,10 @@
 // main.cpp
 #include "CityGraph.h"
-//#include "TimeCalculator.h"
+#include "BreadthFirstSearch.h"
+#include "DepthFirstSearch.h"
+#include "IDDFS.h"
+#include "BestFirstSearch.h"
+#include "AStarSearch.h"
 #include <iostream>
 #include <fstream>
 #include <sstream>

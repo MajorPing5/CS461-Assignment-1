@@ -127,12 +127,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="CityGraph.cpp" />
+    <ClCompile Include="AStarSearch.cpp" />
+    <ClCompile Include="BestFirstSearch.cpp" />
+    <ClCompile Include="BreadthFirstSearch.cpp" />
+    <ClCompile Include="DepthFirstSearch.cpp" />
+    <ClCompile Include="IDDFS.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AStarSearch.h" />
+    <ClInclude Include="BestFirstSearch.h" />
+    <ClInclude Include="BreadthFirstSearch.h" />
     <ClInclude Include="CityGraph.h" />
-    <ClInclude Include="TimeCalculator.h" />
+    <ClInclude Include="DepthFirstSearch.h" />
+    <ClInclude Include="IDDFS.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
