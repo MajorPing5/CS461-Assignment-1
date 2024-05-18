@@ -10,7 +10,7 @@ using std::string;
 using std::unordered_map;
 using std::priority_queue;
 
-vector<string> bestFirstSearch(const CityGraph& graph, const string& start, const string& goal) {
+vector<string> bestFirstSearch(const CityGraph& graph, const string& start, const string& goal, double& totalDistance) {
     // Convert to HeuristicCity graph if not already
     unordered_map<string, HeuristicCity> heuristicGraph;
     for (const auto& pair : graph) {

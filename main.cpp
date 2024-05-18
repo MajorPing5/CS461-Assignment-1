@@ -110,7 +110,7 @@ int main() {
         }
         case 3: {
             chrono::time_point<chrono::high_resolution_clock> timeStart = chrono::high_resolution_clock::now();
-            vector<string> path = IDDFS(graph, start, goal);
+            vector<string> path = IDDFS(graph, start, goal, totalDistance);
             chrono::time_point<chrono::high_resolution_clock> timeStop = chrono::high_resolution_clock::now();
             chrono::microseconds duration = chrono::duration_cast<chrono::microseconds>(timeStop - timeStart);
 
@@ -120,6 +120,7 @@ int main() {
                     cout << city << " -> ";
                 }
                 cout << "end\n";
+                cout << "Total Distance: " << totalDistance << endl;
                 cout << "Time taken to find the route: " << duration.count() << " microseconds\n";
             }
             else {

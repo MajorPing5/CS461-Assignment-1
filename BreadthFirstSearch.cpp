@@ -30,7 +30,7 @@ vector<string> breadthFirstSearch(const CityGraph& graph, const string& start, c
                 string predecessor = cameFrom[at];
 
                 // Error upon execution here: out of range
-                if (predecessor != "" && predecessor != start) {
+                if (predecessor != "") {
                     // Check if the predecessor exists in the graph before trying to access it
                     if (graph.find(at) != graph.end() && graph.find(predecessor) != graph.end()) {
                         totalDistance += graph.at(at).distanceTo(graph.at(predecessor));
