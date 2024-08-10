@@ -18,7 +18,6 @@ vector<string> depthFirstSearch(const CityGraph& graph, const string& start, con
     cameFrom[start] = "";
     distanceFromStart[start] = 0.0;
 
-
     //DFS Algorithm
     while (!stack.empty()) {
         string current = stack.top();

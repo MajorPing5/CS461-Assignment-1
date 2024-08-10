@@ -23,7 +23,7 @@ vector<string> breadthFirstSearch(const CityGraph& graph, const string& start, c
         // Goal check
         if (current == goal) {
             vector<string> path;
-            string temp = goal;
+            //string temp = goal;
             string at = goal;
             while (at != "") {
                 path.push_back(at);

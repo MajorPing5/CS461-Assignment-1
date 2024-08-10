@@ -11,12 +11,11 @@
 #include <string>
 #include <chrono>
 
-using namespace std;
-
 string citiesFilename = "coordinates.csv";
 string adjacenciesFilename = "Adjacencies.txt";
 void parseCities(const string& filename, CityGraph& graph);
 void parseAdjacencies(const string& filename, CityGraph& graph);
+void validateCityName(const CityGraph& graph, string& cityName);
 
 int main() {
     // Variable used for user selection of algorithms
@@ -50,8 +49,11 @@ int main() {
         
         cout << "Submit the starting point name: ";
         cin >> start;
+        validateCityName(graph, start);
+
         cout << "Submit the objective name: ";
         cin >> goal;
+        validateCityName(graph, goal);
 
         switch (selection) {
         case 1: {
@@ -66,7 +68,6 @@ int main() {
             // Calculate duration
             chrono::microseconds duration = chrono::duration_cast<chrono::microseconds>(timeStop - timeStart);
 
-            if (!path.empty()) {
                 cout << "Path found: ";
                 for (const auto& city : path) {
                     cout << city << " -> ";
@@ -75,10 +76,6 @@ int main() {
                     << totalDistance << endl;
                 cout << "Time taken to find the route: "
                     << duration.count() << " microseconds" << endl;
-            } else {
-                cout << "No path found." << endl;
-                cout << "Time taken to find the route: NaN milliseconds" << endl;
-            }
             break;
         }
         case 2: {
@@ -93,7 +90,6 @@ int main() {
             // Calculate duration
             chrono::microseconds duration = chrono::duration_cast<chrono::microseconds>(timeStop - timeStart);
 
-            if (!path.empty()) {
                 cout << "Path found: ";
                 for (const auto& city : path) {
                     cout << city << " -> ";
@@ -102,10 +98,6 @@ int main() {
                     << totalDistance << endl;
                 cout << "Time taken to find the route: "
                     << duration.count() << " microseconds" << endl;
-            } else {
-                cout << "No path found." << endl;
-                cout << "Time taken to find the route: NaN milliseconds" << endl;
-            }
             break;
         }
         case 3: {
@@ -149,9 +141,6 @@ int main() {
             << "[6] Quit" << endl;
         cin >> selection;
     }
-
-    system("pause");
-    return 0;
 }
 
 //  Function intended to begin reading and processing the cities within Coordinates.csv
@@ -191,5 +180,13 @@ void parseAdjacencies(const string& filename, CityGraph& graph) {
         // Assuming symmetric adjacency
         graph[city1].adjacents.push_back(city2);
         graph[city2].adjacents.push_back(city1);
+    }
+}
+
+// Function to validate city names upon input
+void validateCityName(const CityGraph& graph, string& cityName) {
+    while (graph.find(cityName) == graph.end()) {
+        cout << "City name '" << cityName << "' does not exist within 'Coordinates.csv'. Please enter a valid city name: ";
+        cin >> cityName;
     }
 }
