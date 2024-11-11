@@ -44,9 +44,7 @@ vector<string> bestFirstSearch(const CityGraph& graph, const string& start, cons
             }
             reverse(path.begin(), path.end());
             return path;
-        }
-
-        for (const string& next : heuristicGraph.at(current).adjacents) {
+        } else for (const string& next : heuristicGraph.at(current).adjacents) {
             if (!cameFrom.count(next)) {
                 frontier.push(next);
                 cameFrom[next] = current;

@@ -17,6 +17,22 @@ void parseCities(const string& filename, CityGraph& graph);
 void parseAdjacencies(const string& filename, CityGraph& graph);
 void validateCityName(const CityGraph& graph, string& cityName);
 
+void displayResult(const string& algorithmName, const vector<string>& path, double totalDistance, chrono::microseconds duration) {
+    if (!path.empty()) {
+        cout << "Path found using " << algorithmName << ": ";
+        for (const auto& city : path) {
+            cout << city << " -> ";
+        }
+        cout << "end\n";
+        cout << "Total Distance: " << totalDistance << endl;
+        cout << "Time taken to find the route: " << duration.count() << " microseconds" << endl;
+    }
+    else {
+        cout << "No path found using " << algorithmName << "." << endl;
+        cout << "Time taken to find the route: NaN microseconds" << endl;
+    }
+}
+
 int main() {
     // Variable used for user selection of algorithms
     int selection = 0;
@@ -32,7 +48,7 @@ int main() {
     parseAdjacencies(adjacenciesFilename, graph);
 
     // Rest of your main function (user interaction, algorithm selection, etc.)
-    cout << "Welcome to the Search Method Program! Please select your preferred search algorithm/technique"
+    std::cout << "Welcome to the Search Method Program! Please select your preferred search algorithm/technique"
             " by the number indicated to the left of the option (numbers only, no symbols):\n"
             "[1] Breath First Search\n"
             "[2] Depth First Search\n"
@@ -40,20 +56,26 @@ int main() {
             "[4] Best-First Search\n"
             "[5] A* Search\n"
             "[6] Quit" << endl;
-    cin  >> selection;
+    std::cin  >> selection;
     
     while (selection != 6) {
         string start = "";
         string goal = "";
         double totalDistance = 0.0;
         
-        cout << "Submit the starting point name: ";
-        cin >> start;
+        std::cout << "Submit the starting point name: ";
+        std::cin >> start;
         validateCityName(graph, start);
 
-        cout << "Submit the objective name: ";
-        cin >> goal;
+        std::cout << "Submit the objective name: ";
+        std::cin >> goal;
         validateCityName(graph, goal);
+
+
+        /* Note: While yes the following time durations could be calcuated using some level of abstraction,
+        a concern with isolating the operation to explicitly only algorithmic operation persists from segment to segment. Therefore,
+        to eliminate any potential added operation time for explicitly this circumstance I am violating the DRY Principle only for
+        this specific use case. */
 
         switch (selection) {
         case 1: {
@@ -68,14 +90,7 @@ int main() {
             // Calculate duration
             chrono::microseconds duration = chrono::duration_cast<chrono::microseconds>(timeStop - timeStart);
 
-                cout << "Path found: ";
-                for (const auto& city : path) {
-                    cout << city << " -> ";
-                }
-                cout << "\nTotal Distance: " 
-                    << totalDistance << endl;
-                cout << "Time taken to find the route: "
-                    << duration.count() << " microseconds" << endl;
+            displayResult("BFS", path, totalDistance, duration);
             break;
         }
         case 2: {
@@ -90,56 +105,53 @@ int main() {
             // Calculate duration
             chrono::microseconds duration = chrono::duration_cast<chrono::microseconds>(timeStop - timeStart);
 
-                cout << "Path found: ";
-                for (const auto& city : path) {
-                    cout << city << " -> ";
-                }
-                cout << "\nTotal Distance: "
-                    << totalDistance << endl;
-                cout << "Time taken to find the route: "
-                    << duration.count() << " microseconds" << endl;
+            displayResult("DFS", path, totalDistance, duration);
             break;
         }
         case 3: {
+            // System Timer Begins
             chrono::time_point<chrono::high_resolution_clock> timeStart = chrono::high_resolution_clock::now();
-            vector<string> path = IDDFS(graph, start, goal, totalDistance);
+
+            const vector<string> path = IDDFS(graph, start, goal, totalDistance);
+
+            // System Timer Ends
             chrono::time_point<chrono::high_resolution_clock> timeStop = chrono::high_resolution_clock::now();
+
+            // Calculate Duration
             chrono::microseconds duration = chrono::duration_cast<chrono::microseconds>(timeStop - timeStart);
 
-            if (!path.empty()) {
-                cout << "Path found using IDDFS: ";
-                for (const auto& city : path) {
-                    cout << city << " -> ";
-                }
-                cout << "end\n";
-                cout << "Total Distance: " << totalDistance << endl;
-                cout << "Time taken to find the route: " << duration.count() << " microseconds\n";
-            }
-            else {
-                cout << "No path found using IDDFS." << endl;
-                cout << "Time taken to find the route: NaN microseconds\n";
-            }
+            displayResult("IDDFS", path, totalDistance, duration);
             break;
         }
         case 4: {
-            cout << "Algorithm incomplete" << endl;
-            break;
+            // System Timer Begins
+            chrono::time_point<chrono::high_resolution_clock> timeStart = chrono::high_resolution_clock::now();
+
+            const vector<string> path = bestFirstSearch(graph, start, goal, totalDistance);
+
+            // System Timer Ends
+            chrono::time_point<chrono::high_resolution_clock> timeStop = chrono::high_resolution_clock::now();
+
+            // Calculate Duration
+            chrono::microseconds duration = chrono::duration_cast<chrono::microseconds>(timeStop - timeStart);
+
+            displayResult("Best-First Search", path, totalDistance, duration);
         }
         case 5: {
-            cout << "Algorithm incomplete" << endl;
+            std::cout << "Algorithm incomplete" << endl;
             break;
         }
         default:
-            cout << "Input not recognized. Try again." << endl;
+            std::cout << "Input not recognized. Try again." << endl;
         }
-        cout << "For another algorithm, select a different number than your previous entry. Else, enter 6 to quit the program:" << endl
+        std::cout << "For another algorithm, select a different number than your previous entry. Else, enter 6 to quit the program:" << endl
             << "[1] Breath First Search" << endl
             << "[2] Depth First Search" << endl
             << "[3] Iterative Deepening Depth First Search" << endl
             << "[4] Best-First Search" << endl
             << "[5] A* Search" << endl
             << "[6] Quit" << endl;
-        cin >> selection;
+        std::cin >> selection;
     }
 }
 
@@ -186,7 +198,7 @@ void parseAdjacencies(const string& filename, CityGraph& graph) {
 // Function to validate city names upon input
 void validateCityName(const CityGraph& graph, string& cityName) {
     while (graph.find(cityName) == graph.end()) {
-        cout << "City name '" << cityName << "' does not exist within 'Coordinates.csv'. Please enter a valid city name: ";
-        cin >> cityName;
+        std::cout << "City name '" << cityName << "' does not exist within 'Coordinates.csv'. Please enter a valid city name: ";
+        std::cin >> cityName;
     }
 }
