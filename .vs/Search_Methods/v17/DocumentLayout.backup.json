@@ -1,53 +1,57 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Robert-Abel Porras\\source\\repos\\MajorPing5\\COMP-SCI-461---Assignment-1\\",
+  "WorkspaceRootPath": "C:\\Users\\UMKCE\\Documents\\GitHub\\Academic Files\\CS461-Assignment-1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F77CB29A-D99C-42C2-B555-4EDA2F14FAB3}|Search_Methods.vcxproj|C:\\Users\\Robert-Abel Porras\\source\\repos\\MajorPing5\\COMP-SCI-461---Assignment-1\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{F77CB29A-D99C-42C2-B555-4EDA2F14FAB3}|Search_Methods.vcxproj|C:\\Users\\UMKCE\\Documents\\GitHub\\Academic Files\\CS461-Assignment-1\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{F77CB29A-D99C-42C2-B555-4EDA2F14FAB3}|Search_Methods.vcxproj|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F77CB29A-D99C-42C2-B555-4EDA2F14FAB3}|Search_Methods.vcxproj|C:\\Users\\Robert-Abel Porras\\source\\repos\\MajorPing5\\COMP-SCI-461---Assignment-1\\BreadthFirstSearch.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{F77CB29A-D99C-42C2-B555-4EDA2F14FAB3}|Search_Methods.vcxproj|solutionrelative:BreadthFirstSearch.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\UMKCE\\Documents\\GitHub\\Academic Files\\CS461-Assignment-1\\Unit-Tests.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Unit-Tests.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F77CB29A-D99C-42C2-B555-4EDA2F14FAB3}|Search_Methods.vcxproj|C:\\Users\\Robert-Abel Porras\\source\\repos\\MajorPing5\\COMP-SCI-461---Assignment-1\\BestFirstSearch.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{F77CB29A-D99C-42C2-B555-4EDA2F14FAB3}|Search_Methods.vcxproj|C:\\Users\\UMKCE\\Documents\\GitHub\\Academic Files\\CS461-Assignment-1\\BestFirstSearch.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{F77CB29A-D99C-42C2-B555-4EDA2F14FAB3}|Search_Methods.vcxproj|solutionrelative:BestFirstSearch.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F77CB29A-D99C-42C2-B555-4EDA2F14FAB3}|Search_Methods.vcxproj|C:\\Users\\Robert-Abel Porras\\source\\repos\\MajorPing5\\COMP-SCI-461---Assignment-1\\BestFirstSearch.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{F77CB29A-D99C-42C2-B555-4EDA2F14FAB3}|Search_Methods.vcxproj|solutionrelative:BestFirstSearch.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F77CB29A-D99C-42C2-B555-4EDA2F14FAB3}|Search_Methods.vcxproj|C:\\Users\\Robert-Abel Porras\\source\\repos\\MajorPing5\\COMP-SCI-461---Assignment-1\\DepthFirstSearch.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{F77CB29A-D99C-42C2-B555-4EDA2F14FAB3}|Search_Methods.vcxproj|solutionrelative:DepthFirstSearch.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F77CB29A-D99C-42C2-B555-4EDA2F14FAB3}|Search_Methods.vcxproj|C:\\Users\\Robert-Abel Porras\\source\\repos\\MajorPing5\\COMP-SCI-461---Assignment-1\\IDDFS.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{F77CB29A-D99C-42C2-B555-4EDA2F14FAB3}|Search_Methods.vcxproj|solutionrelative:IDDFS.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F77CB29A-D99C-42C2-B555-4EDA2F14FAB3}|Search_Methods.vcxproj|C:\\Users\\Robert-Abel Porras\\source\\repos\\MajorPing5\\COMP-SCI-461---Assignment-1\\BreadthFirstSearch.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{F77CB29A-D99C-42C2-B555-4EDA2F14FAB3}|Search_Methods.vcxproj|solutionrelative:BreadthFirstSearch.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F77CB29A-D99C-42C2-B555-4EDA2F14FAB3}|Search_Methods.vcxproj|C:\\Users\\Robert-Abel Porras\\source\\repos\\MajorPing5\\COMP-SCI-461---Assignment-1\\AStarSearch.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{F77CB29A-D99C-42C2-B555-4EDA2F14FAB3}|Search_Methods.vcxproj|solutionrelative:AStarSearch.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F77CB29A-D99C-42C2-B555-4EDA2F14FAB3}|Search_Methods.vcxproj|C:\\Users\\Robert-Abel Porras\\source\\repos\\MajorPing5\\COMP-SCI-461---Assignment-1\\CityGraph.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{F77CB29A-D99C-42C2-B555-4EDA2F14FAB3}|Search_Methods.vcxproj|C:\\Users\\UMKCE\\Documents\\GitHub\\Academic Files\\CS461-Assignment-1\\CityGraph.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{F77CB29A-D99C-42C2-B555-4EDA2F14FAB3}|Search_Methods.vcxproj|solutionrelative:CityGraph.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F77CB29A-D99C-42C2-B555-4EDA2F14FAB3}|Search_Methods.vcxproj|C:\\Users\\Robert-Abel Porras\\source\\repos\\MajorPing5\\COMP-SCI-461---Assignment-1\\DepthFirstSearch.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{F77CB29A-D99C-42C2-B555-4EDA2F14FAB3}|Search_Methods.vcxproj|solutionrelative:DepthFirstSearch.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{F77CB29A-D99C-42C2-B555-4EDA2F14FAB3}|Search_Methods.vcxproj|C:\\Users\\UMKCE\\Documents\\GitHub\\Academic Files\\CS461-Assignment-1\\BestFirstSearch.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F77CB29A-D99C-42C2-B555-4EDA2F14FAB3}|Search_Methods.vcxproj|solutionrelative:BestFirstSearch.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F77CB29A-D99C-42C2-B555-4EDA2F14FAB3}|Search_Methods.vcxproj|C:\\Users\\Robert-Abel Porras\\source\\repos\\MajorPing5\\COMP-SCI-461---Assignment-1\\IDDFS.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{F77CB29A-D99C-42C2-B555-4EDA2F14FAB3}|Search_Methods.vcxproj|C:\\Users\\UMKCE\\Documents\\GitHub\\Academic Files\\CS461-Assignment-1\\IDDFS.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{F77CB29A-D99C-42C2-B555-4EDA2F14FAB3}|Search_Methods.vcxproj|solutionrelative:IDDFS.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F77CB29A-D99C-42C2-B555-4EDA2F14FAB3}|Search_Methods.vcxproj|C:\\Users\\Robert-Abel Porras\\source\\repos\\MajorPing5\\COMP-SCI-461---Assignment-1\\AStarSearch.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{F77CB29A-D99C-42C2-B555-4EDA2F14FAB3}|Search_Methods.vcxproj|C:\\Users\\UMKCE\\Documents\\GitHub\\Academic Files\\CS461-Assignment-1\\BreadthFirstSearch.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F77CB29A-D99C-42C2-B555-4EDA2F14FAB3}|Search_Methods.vcxproj|solutionrelative:BreadthFirstSearch.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F77CB29A-D99C-42C2-B555-4EDA2F14FAB3}|Search_Methods.vcxproj|C:\\Users\\UMKCE\\Documents\\GitHub\\Academic Files\\CS461-Assignment-1\\DepthFirstSearch.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F77CB29A-D99C-42C2-B555-4EDA2F14FAB3}|Search_Methods.vcxproj|solutionrelative:DepthFirstSearch.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F77CB29A-D99C-42C2-B555-4EDA2F14FAB3}|Search_Methods.vcxproj|C:\\Users\\UMKCE\\Documents\\GitHub\\Academic Files\\CS461-Assignment-1\\IDDFS.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F77CB29A-D99C-42C2-B555-4EDA2F14FAB3}|Search_Methods.vcxproj|solutionrelative:IDDFS.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F77CB29A-D99C-42C2-B555-4EDA2F14FAB3}|Search_Methods.vcxproj|C:\\Users\\UMKCE\\Documents\\GitHub\\Academic Files\\CS461-Assignment-1\\BreadthFirstSearch.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F77CB29A-D99C-42C2-B555-4EDA2F14FAB3}|Search_Methods.vcxproj|solutionrelative:BreadthFirstSearch.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F77CB29A-D99C-42C2-B555-4EDA2F14FAB3}|Search_Methods.vcxproj|C:\\Users\\UMKCE\\Documents\\GitHub\\Academic Files\\CS461-Assignment-1\\AStarSearch.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F77CB29A-D99C-42C2-B555-4EDA2F14FAB3}|Search_Methods.vcxproj|solutionrelative:AStarSearch.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F77CB29A-D99C-42C2-B555-4EDA2F14FAB3}|Search_Methods.vcxproj|C:\\Users\\UMKCE\\Documents\\GitHub\\Academic Files\\CS461-Assignment-1\\DepthFirstSearch.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F77CB29A-D99C-42C2-B555-4EDA2F14FAB3}|Search_Methods.vcxproj|solutionrelative:DepthFirstSearch.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F77CB29A-D99C-42C2-B555-4EDA2F14FAB3}|Search_Methods.vcxproj|C:\\Users\\UMKCE\\Documents\\GitHub\\Academic Files\\CS461-Assignment-1\\AStarSearch.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{F77CB29A-D99C-42C2-B555-4EDA2F14FAB3}|Search_Methods.vcxproj|solutionrelative:AStarSearch.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
@@ -58,7 +62,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 12,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -67,86 +71,47 @@
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "DepthFirstSearch.cpp",
-              "DocumentMoniker": "C:\\Users\\Robert-Abel Porras\\source\\repos\\MajorPing5\\COMP-SCI-461---Assignment-1\\DepthFirstSearch.cpp",
-              "RelativeDocumentMoniker": "DepthFirstSearch.cpp",
-              "ToolTip": "C:\\Users\\Robert-Abel Porras\\source\\repos\\MajorPing5\\COMP-SCI-461---Assignment-1\\DepthFirstSearch.cpp",
-              "RelativeToolTip": "DepthFirstSearch.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-04-29T18:37:16.925Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "DepthFirstSearch.h",
-              "DocumentMoniker": "C:\\Users\\Robert-Abel Porras\\source\\repos\\MajorPing5\\COMP-SCI-461---Assignment-1\\DepthFirstSearch.h",
-              "RelativeDocumentMoniker": "DepthFirstSearch.h",
-              "ToolTip": "C:\\Users\\Robert-Abel Porras\\source\\repos\\MajorPing5\\COMP-SCI-461---Assignment-1\\DepthFirstSearch.h",
-              "RelativeToolTip": "DepthFirstSearch.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-11-11T04:59:28.08Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "BreadthFirstSearch.cpp",
-              "DocumentMoniker": "C:\\Users\\Robert-Abel Porras\\source\\repos\\MajorPing5\\COMP-SCI-461---Assignment-1\\BreadthFirstSearch.cpp",
-              "RelativeDocumentMoniker": "BreadthFirstSearch.cpp",
-              "ToolTip": "C:\\Users\\Robert-Abel Porras\\source\\repos\\MajorPing5\\COMP-SCI-461---Assignment-1\\BreadthFirstSearch.cpp",
-              "RelativeToolTip": "BreadthFirstSearch.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-08-10T02:41:11.418Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
               "Title": "BreadthFirstSearch.h",
-              "DocumentMoniker": "C:\\Users\\Robert-Abel Porras\\source\\repos\\MajorPing5\\COMP-SCI-461---Assignment-1\\BreadthFirstSearch.h",
+              "DocumentMoniker": "C:\\Users\\UMKCE\\Documents\\GitHub\\Academic Files\\CS461-Assignment-1\\BreadthFirstSearch.h",
               "RelativeDocumentMoniker": "BreadthFirstSearch.h",
-              "ToolTip": "C:\\Users\\Robert-Abel Porras\\source\\repos\\MajorPing5\\COMP-SCI-461---Assignment-1\\BreadthFirstSearch.h",
+              "ToolTip": "C:\\Users\\UMKCE\\Documents\\GitHub\\Academic Files\\CS461-Assignment-1\\BreadthFirstSearch.h",
               "RelativeToolTip": "BreadthFirstSearch.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-08-10T02:41:06.425Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "IDDFS.cpp",
-              "DocumentMoniker": "C:\\Users\\Robert-Abel Porras\\source\\repos\\MajorPing5\\COMP-SCI-461---Assignment-1\\IDDFS.cpp",
-              "RelativeDocumentMoniker": "IDDFS.cpp",
-              "ToolTip": "C:\\Users\\Robert-Abel Porras\\source\\repos\\MajorPing5\\COMP-SCI-461---Assignment-1\\IDDFS.cpp",
-              "RelativeToolTip": "IDDFS.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAA4AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-04-29T18:18:41.818Z"
+              "WhenOpened": "2024-08-10T02:41:06.425Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "IDDFS.h",
-              "DocumentMoniker": "C:\\Users\\Robert-Abel Porras\\source\\repos\\MajorPing5\\COMP-SCI-461---Assignment-1\\IDDFS.h",
-              "RelativeDocumentMoniker": "IDDFS.h",
-              "ToolTip": "C:\\Users\\Robert-Abel Porras\\source\\repos\\MajorPing5\\COMP-SCI-461---Assignment-1\\IDDFS.h",
-              "RelativeToolTip": "IDDFS.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-11-11T04:59:38.249Z",
+              "Title": "IDDFS.cpp",
+              "DocumentMoniker": "C:\\Users\\UMKCE\\Documents\\GitHub\\Academic Files\\CS461-Assignment-1\\IDDFS.cpp",
+              "RelativeDocumentMoniker": "IDDFS.cpp",
+              "ToolTip": "C:\\Users\\UMKCE\\Documents\\GitHub\\Academic Files\\CS461-Assignment-1\\IDDFS.cpp",
+              "RelativeToolTip": "IDDFS.cpp",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABQAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-04-29T18:18:41.818Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 8,
+              "Title": "IDDFS.h",
+              "DocumentMoniker": "C:\\Users\\UMKCE\\Documents\\GitHub\\Academic Files\\CS461-Assignment-1\\IDDFS.h",
+              "RelativeDocumentMoniker": "IDDFS.h",
+              "ToolTip": "C:\\Users\\UMKCE\\Documents\\GitHub\\Academic Files\\CS461-Assignment-1\\IDDFS.h",
+              "RelativeToolTip": "IDDFS.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-11-11T04:59:38.249Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "AStarSearch.cpp",
-              "DocumentMoniker": "C:\\Users\\Robert-Abel Porras\\source\\repos\\MajorPing5\\COMP-SCI-461---Assignment-1\\AStarSearch.cpp",
+              "DocumentMoniker": "C:\\Users\\UMKCE\\Documents\\GitHub\\Academic Files\\CS461-Assignment-1\\AStarSearch.cpp",
               "RelativeDocumentMoniker": "AStarSearch.cpp",
-              "ToolTip": "C:\\Users\\Robert-Abel Porras\\source\\repos\\MajorPing5\\COMP-SCI-461---Assignment-1\\AStarSearch.cpp",
+              "ToolTip": "C:\\Users\\UMKCE\\Documents\\GitHub\\Academic Files\\CS461-Assignment-1\\AStarSearch.cpp",
               "RelativeToolTip": "AStarSearch.cpp",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
@@ -156,22 +121,22 @@
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "BestFirstSearch.cpp",
-              "DocumentMoniker": "C:\\Users\\Robert-Abel Porras\\source\\repos\\MajorPing5\\COMP-SCI-461---Assignment-1\\BestFirstSearch.cpp",
+              "DocumentMoniker": "C:\\Users\\UMKCE\\Documents\\GitHub\\Academic Files\\CS461-Assignment-1\\BestFirstSearch.cpp",
               "RelativeDocumentMoniker": "BestFirstSearch.cpp",
-              "ToolTip": "C:\\Users\\Robert-Abel Porras\\source\\repos\\MajorPing5\\COMP-SCI-461---Assignment-1\\BestFirstSearch.cpp",
+              "ToolTip": "C:\\Users\\UMKCE\\Documents\\GitHub\\Academic Files\\CS461-Assignment-1\\BestFirstSearch.cpp",
               "RelativeToolTip": "BestFirstSearch.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADMAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAB0AAABFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-04-29T06:20:40.848Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "BestFirstSearch.h",
-              "DocumentMoniker": "C:\\Users\\Robert-Abel Porras\\source\\repos\\MajorPing5\\COMP-SCI-461---Assignment-1\\BestFirstSearch.h",
+              "DocumentMoniker": "C:\\Users\\UMKCE\\Documents\\GitHub\\Academic Files\\CS461-Assignment-1\\BestFirstSearch.h",
               "RelativeDocumentMoniker": "BestFirstSearch.h",
-              "ToolTip": "C:\\Users\\Robert-Abel Porras\\source\\repos\\MajorPing5\\COMP-SCI-461---Assignment-1\\BestFirstSearch.h",
+              "ToolTip": "C:\\Users\\UMKCE\\Documents\\GitHub\\Academic Files\\CS461-Assignment-1\\BestFirstSearch.h",
               "RelativeToolTip": "BestFirstSearch.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
@@ -180,42 +145,91 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "AStarSearch.h",
-              "DocumentMoniker": "C:\\Users\\Robert-Abel Porras\\source\\repos\\MajorPing5\\COMP-SCI-461---Assignment-1\\AStarSearch.h",
+              "DocumentMoniker": "C:\\Users\\UMKCE\\Documents\\GitHub\\Academic Files\\CS461-Assignment-1\\AStarSearch.h",
               "RelativeDocumentMoniker": "AStarSearch.h",
-              "ToolTip": "C:\\Users\\Robert-Abel Porras\\source\\repos\\MajorPing5\\COMP-SCI-461---Assignment-1\\AStarSearch.h",
+              "ToolTip": "C:\\Users\\UMKCE\\Documents\\GitHub\\Academic Files\\CS461-Assignment-1\\AStarSearch.h",
               "RelativeToolTip": "AStarSearch.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-04-29T06:20:19.639Z",
+              "WhenOpened": "2024-04-29T06:20:19.639Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\Users\\UMKCE\\Documents\\GitHub\\Academic Files\\CS461-Assignment-1\\main.cpp",
+              "RelativeDocumentMoniker": "main.cpp",
+              "ToolTip": "C:\\Users\\UMKCE\\Documents\\GitHub\\Academic Files\\CS461-Assignment-1\\main.cpp",
+              "RelativeToolTip": "main.cpp",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABYAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-03-12T14:24:32.048Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 1,
+              "Title": "Unit-Tests.cpp",
+              "DocumentMoniker": "C:\\Users\\UMKCE\\Documents\\GitHub\\Academic Files\\CS461-Assignment-1\\Unit-Tests.cpp",
+              "RelativeDocumentMoniker": "Unit-Tests.cpp",
+              "ToolTip": "C:\\Users\\UMKCE\\Documents\\GitHub\\Academic Files\\CS461-Assignment-1\\Unit-Tests.cpp",
+              "RelativeToolTip": "Unit-Tests.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-11-15T22:33:45.744Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "BreadthFirstSearch.cpp",
+              "DocumentMoniker": "C:\\Users\\UMKCE\\Documents\\GitHub\\Academic Files\\CS461-Assignment-1\\BreadthFirstSearch.cpp",
+              "RelativeDocumentMoniker": "BreadthFirstSearch.cpp",
+              "ToolTip": "C:\\Users\\UMKCE\\Documents\\GitHub\\Academic Files\\CS461-Assignment-1\\BreadthFirstSearch.cpp",
+              "RelativeToolTip": "BreadthFirstSearch.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-08-10T02:41:11.418Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "CityGraph.h",
-              "DocumentMoniker": "C:\\Users\\Robert-Abel Porras\\source\\repos\\MajorPing5\\COMP-SCI-461---Assignment-1\\CityGraph.h",
+              "DocumentMoniker": "C:\\Users\\UMKCE\\Documents\\GitHub\\Academic Files\\CS461-Assignment-1\\CityGraph.h",
               "RelativeDocumentMoniker": "CityGraph.h",
-              "ToolTip": "C:\\Users\\Robert-Abel Porras\\source\\repos\\MajorPing5\\COMP-SCI-461---Assignment-1\\CityGraph.h",
+              "ToolTip": "C:\\Users\\UMKCE\\Documents\\GitHub\\Academic Files\\CS461-Assignment-1\\CityGraph.h",
               "RelativeToolTip": "CityGraph.h",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAABIAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-04-22T03:56:56.358Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "main.cpp",
-              "DocumentMoniker": "C:\\Users\\Robert-Abel Porras\\source\\repos\\MajorPing5\\COMP-SCI-461---Assignment-1\\main.cpp",
-              "RelativeDocumentMoniker": "main.cpp",
-              "ToolTip": "C:\\Users\\Robert-Abel Porras\\source\\repos\\MajorPing5\\COMP-SCI-461---Assignment-1\\main.cpp",
-              "RelativeToolTip": "main.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAABAAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "DepthFirstSearch.h",
+              "DocumentMoniker": "C:\\Users\\UMKCE\\Documents\\GitHub\\Academic Files\\CS461-Assignment-1\\DepthFirstSearch.h",
+              "RelativeDocumentMoniker": "DepthFirstSearch.h",
+              "ToolTip": "C:\\Users\\UMKCE\\Documents\\GitHub\\Academic Files\\CS461-Assignment-1\\DepthFirstSearch.h",
+              "RelativeToolTip": "DepthFirstSearch.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-11-11T04:59:28.08Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "DepthFirstSearch.cpp",
+              "DocumentMoniker": "C:\\Users\\UMKCE\\Documents\\GitHub\\Academic Files\\CS461-Assignment-1\\DepthFirstSearch.cpp",
+              "RelativeDocumentMoniker": "DepthFirstSearch.cpp",
+              "ToolTip": "C:\\Users\\UMKCE\\Documents\\GitHub\\Academic Files\\CS461-Assignment-1\\DepthFirstSearch.cpp",
+              "RelativeToolTip": "DepthFirstSearch.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-03-12T14:24:32.048Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-29T18:37:16.925Z"
             }
           ]
         }

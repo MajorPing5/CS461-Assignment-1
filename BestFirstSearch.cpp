@@ -4,6 +4,7 @@
 #include <queue>
 #include <functional>
 #include <vector>
+#include <iostream>
 
 using std::vector;
 using std::string;
@@ -16,12 +17,17 @@ vector<string> bestFirstSearch(const CityGraph& graph, const string& start, cons
     for (const auto& pair : graph) {
         const auto& city = pair.second;
         heuristicGraph[pair.first] = HeuristicCity(city.name, city.latitude, city.longitude, 0.0);
+        std::cout << heuristicGraph[pair.first].adjacents.size() << std::endl;
     }
 
     // Assume goal city coordinates are known and update heuristics
     const HeuristicCity& goalCity = heuristicGraph.at(goal);
     for (auto& pair : heuristicGraph) {
         pair.second.updateHeuristic(goalCity);
+    }
+
+    for (auto& pair : graph) {
+        heuristicGraph[pair.first].adjacents = pair.second.adjacents;
     }
 
     auto compare = [&](const string& a, const string& b) {
@@ -44,10 +50,13 @@ vector<string> bestFirstSearch(const CityGraph& graph, const string& start, cons
             }
             reverse(path.begin(), path.end());
             return path;
-        } else for (const string& next : heuristicGraph.at(current).adjacents) {
-            if (!cameFrom.count(next)) {
-                frontier.push(next);
-                cameFrom[next] = current;
+        } else {
+            std::cout << heuristicGraph.at(current).adjacents.size() << std::endl;
+            for (const string& next : heuristicGraph.at(current).adjacents) {
+                if (!cameFrom.count(next)) {
+                    frontier.push(next);
+                    cameFrom[next] = current;
+                }
             }
         }
     }

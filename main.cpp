@@ -141,6 +141,10 @@ int main() {
             std::cout << "Algorithm incomplete" << endl;
             break;
         }
+        case 6: {
+            
+            break;
+        }
         default:
             std::cout << "Input not recognized. Try again." << endl;
         }
